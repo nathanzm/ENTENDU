@@ -1,4 +1,4 @@
-# This web application was originally based on the following:
+# ENTENDU! was originally based on the following:
 
 ## [Start Bootstrap](http://startbootstrap.com/) - [Freelancer](http://startbootstrap.com/template-overviews/freelancer/)
 
