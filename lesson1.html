@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>ENTENDU! - Lesson One</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="css/freelancer.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" class="index">
+
+    <!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="#page-top">ENTENDU!</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a href="./index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="./quiz1.html">Quiz One</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <img class="img-responsive" src="img/profile.png" alt="">
+                    <div class="intro-text">
+                        <span class="name">LESSON ONE</span>
+                        <hr class="star-light">
+                        <span class="skills">The Sounds of French: the international phonetic alphabet<br>and French "phonemes" (sounds).</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+<!-- Portfolio Grid Section -->
+    <section id="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h4>In this lesson we will learn to pronounce the French phonemes<br>and identify their symbols from the International Phonetic Alphabet.</h4>
+                    <hr class="star-primary">
+                </div>
+            </div>
+
+            <div class="row col-lg-12">
+                <p>There are 35 French phonemes altogether: 15 vowels, 17 consonants, and 3 semi-vowels.</p>
+                <p>Listen to and repeat the following vowel sounds:</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-center" style="padding: 25px;">
+                    <button id="vowelsPlayAll" class="btn btn-primary" onclick="playAll('vowels')">
+                        <i id="vowelsPlayAllButton" class="fa fa-play"></i>
+                    </button>
+                    <div class="btn-group">
+                        <a id="ivowels" class="btn btn-default" onclick="playSingle('i', this)">
+                            i
+                        </a>
+                        <a id="yvowels" class="btn btn-default" onclick="playSingle('y', this)">
+                            y
+                        </a>
+                        <a id="uvowels" class="btn btn-default" onclick="playSingle('u', this)">
+                            u
+                        </a>
+                        <a id="evowels" class="btn btn-default" onclick="playSingle('e', this)">
+                            e
+                        </a>
+                        <a id="øvowels" class="btn btn-default" onclick="playSingle('ø', this)">
+                            ø
+                        </a>
+                        <a id="ovowels" class="btn btn-default" onclick="playSingle('o', this)">
+                            o
+                        </a>
+                        <a id="ɛvowels" class="btn btn-default" onclick="playSingle('ɛ', this)">
+                            ɛ
+                        </a>
+                        <a id="œvowels" class="btn btn-default" onclick="playSingle('œ', this)">
+                            œ
+                        </a>
+                        <a id="ɔvowels" class="btn btn-default" onclick="playSingle('ɔ', this)">
+                            ɔ
+                        </a>
+                        <a id="avowels" class="btn btn-default" onclick="playSingle('a', this)">
+                            a
+                        </a>
+                        <a id="ɑvowels" class="btn btn-default" onclick="playSingle('ɑ', this)">
+                            ɑ
+                        </a>
+                        <a id="ɛ̃vowels" class="btn btn-default" onclick="playSingle('ɛ̃', this)">
+                            ɛ̃
+                        </a>
+                        <a id="œ̃vowels" class="btn btn-default" onclick="playSingle('œ̃', this)">
+                            œ̃
+                        </a>
+                        <a id="ãvowels" class="btn btn-default" onclick="playSingle('ã', this)">
+                            ã
+                        </a>
+                        <a id="ɔ̃vowels" class="btn btn-default" onclick="playSingle('ɔ̃', this)">
+                            ɔ̃
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 text-center" style="padding: 25px;">
+                <button class="btn btn-primary" onclick="playSingle('i', this)">
+                    <i class="fa fa-play" style="padding-right: 10px;"></i> i
+                </button>
+            </div>
+
+            <div class="row col-lg-6">
+                <p>Listen to and repeat the following semi-vowels:</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-center" style="padding: 25px;">
+                    <button id="semivowelsPlayAll" class="btn btn-primary" onclick="playAll('semivowels')">
+                        <i id="semivowelsPlayAllButton" class="fa fa-play"></i>
+                    </button>
+                    <div class="btn-group">
+                        <a id="jsemivowels" class="btn btn-default" onclick="playSingle('j', this)">
+                            j
+                        </a>
+                        <a id="ɥsemivowels" class="btn btn-default" onclick="playSingle('ɥ', this)">
+                            ɥ
+                        </a>
+                        <a id="wsemivowels" class="btn btn-default" onclick="playSingle('w', this)">
+                            w
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row col-lg-6">
+                <p>Listen to and repeat the following consonant sounds.<br>We will use them as the first sounds in words to make it easier to pronounce them:</p>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center" style="padding: 25px;">
+                    <button id="consonantsPlayAll" class="btn btn-primary" onclick="playAll('consonants')">
+                        <i id="consonantsPlayAllButton" class="fa fa-play"></i>
+                    </button>
+                    <div class="btn-group">
+                        <a id="mconsonants" class="btn btn-default" onclick="playSingle('m', this)">
+                            m
+                        </a>
+                        <a id="nconsonants" class="btn btn-default" onclick="playSingle('n', this)">
+                            n
+                        </a>
+                        <a id="ɲconsonants" class="btn btn-default" onclick="playSingle('ɲ', this)">
+                            ɲ
+                        </a>
+                        <a id="pconsonants" class="btn btn-default" onclick="playSingle('p', this)">
+                            p
+                        </a>
+                        <a id="tconsonants" class="btn btn-default" onclick="playSingle('t', this)">
+                            t
+                        </a>
+                        <a id="kconsonants" class="btn btn-default" onclick="playSingle('k', this)">
+                            k
+                        </a>
+                        <a id="bconsonants" class="btn btn-default" onclick="playSingle('b', this)">
+                            b
+                        </a>
+                        <a id="dconsonants" class="btn btn-default" onclick="playSingle('d', this)">
+                            d
+                        </a>
+                        <a id="gconsonants" class="btn btn-default" onclick="playSingle('g', this)">
+                            g
+                        </a>
+                        <a id="fconsonants" class="btn btn-default" onclick="playSingle('f', this)">
+                            f
+                        </a>
+                        <a id="sconsonants" class="btn btn-default" onclick="playSingle('s', this)">
+                            s
+                        </a>
+                        <a id="ʃconsonants" class="btn btn-default" onclick="playSingle('ʃ', this)">
+                            ʃ
+                        </a>
+                        <a id="vconsonants" class="btn btn-default" onclick="playSingle('v', this)">
+                            v
+                        </a>
+                        <a id="zconsonants" class="btn btn-default" onclick="playSingle('z', this)">
+                            z
+                        </a>
+                        <a id="ʒconsonants" class="btn btn-default" onclick="playSingle('ʒ', this)">
+                            ʒ
+                        </a>
+                        <a id="lconsonants" class="btn btn-default" onclick="playSingle('l', this)">
+                            l
+                        </a>
+                        <a id="ʁconsonants" class="btn btn-default" onclick="playSingle('ʁ', this)">
+                            ʁ
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row col-md-12" style="margin-top: 100px;">
+                <p>Knowing a little about how French phonemes are formed, or their articulatory characteristics, can help us sound more like native speakers. The goal being not the perfect French accent, but to be easily understood by native speakers of French.</p>
+                <p>For the most part French consonants are pronounced like their English counterparts–exceptions being / l /, / t / and of course "r", / ʁ /.</p>
+                <p>For now, let's focus on the vowels, which present very different articulatory characteristics compared to English vowels.</p>
+                <p>Articulation of vowels, semivowels, and consonants in French is complex. But having a basic understanding of how they are articulated can help us learn to “adjust” our pronunciation to emulate that of native speakers.</p>
+                <p></p>
+            </div>
+
+
+            <!-- PART ONE -->
+            <div class="row">
+                <div class="col-md-10" style="margin-top: 100px;">
+                    <p>I. As a general rule, French vowels are shorter and more “clipped” than their English counterparts, which often “glide” into a different sound as they fade. Compare the following sounds:</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-3 col-xs-offset-3">
+                    <p>English</p>
+                    <p>me</p>
+                    <p>sea</p>
+                    <p>moo</p>
+                    <p>Lou</p>
+                </div>
+                <div class="col-xs-3">
+                    <p>French</p>
+                    <p>/ i / mie</p>
+                    <p>/ i / si</p>
+                    <p>/ u / mou</p>
+                    <p>/ u / loup</p>
+                </div>
+            </div>
+            <div class="row col-md-12">
+                <p>Notice that the French vowels are "purer," with no variation or glide, and slightly "clipped."</p>
+            </div>
+
+
+            <!-- PART TWO -->
+            <div class="row col-md-8" style="margin-top: 100px;">
+                <p>II. Let's compare closed vs. open vowels. The most closed vowels in French are:</p>
+            </div>
+            <div class="row">
+                <div class="col-sm-3 col-sm-offset-3" style="padding: 25px;">
+                    <button id="closedPlayAll" class="btn btn-primary" onclick="playAll('closed')">
+                        <i id="closedPlayAllButton" class="fa fa-play"></i>
+                    </button>
+                    <div class="btn-group">
+                        <a id="iclosed" class="btn btn-default" onclick="playSingle('i', this)">
+                            i
+                        </a>
+                        <a id="yclosed" class="btn btn-default" onclick="playSingle('y', this)">
+                            y
+                        </a>
+                        <a id="uclosed" class="btn btn-default" onclick="playSingle('u', this)">
+                            u
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <img class="img-responsive" alt="Responsive image" src="img/mouthPosition.png">
+                </div>
+            </div>
+            <div class="row col-md-8">
+                <p>Notice in the graphic how the tongue is raised close to the palate when these vowels are pronounced. Listen again, repeat being aware of how a closed vowel feels.</p>
+            </div>
+
+            <div class="row col-md-8" style="margin-top: 100px;">
+                <p>In the spectrum closed to open, these next vowels are considered "1/2 closed":</p>
+            </div>
+            <div class="row">
+                <div class="col-sm-3 col-sm-offset-3" style="padding: 25px;">
+                    <button id="halfclosedPlayAll" class="btn btn-primary" onclick="playAll('halfclosed')">
+                        <i id="halfclosedPlayAllButton" class="fa fa-play"></i>
+                    </button>
+                    <div class="btn-group">
+                        <a id="ehalfclosed" class="btn btn-default" onclick="playSingle('e', this)">
+                            e
+                        </a>
+                        <a id="øhalfclosed" class="btn btn-default" onclick="playSingle('ø', this)">
+                            ø
+                        </a>
+                        <a id="ohalfclosed" class="btn btn-default" onclick="playSingle('o', this)">
+                            o
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <img class="img-responsive" alt="Responsive image" src="img/mouthPosition.png">
+                </div>
+            </div>
+            <div class="row col-md-8-12">
+                <p>They are only slightly less closed, as shown in the graphic.</p>
+            </div>
+
+            <div class="row col-md-8" style="margin-top: 100px;">
+                <p>The following vowels are considered "1/2 open":</p>
+            </div>
+            <div class="row">
+                <div class="col-sm-3 col-sm-offset-3" style="padding: 25px;">
+                    <button id="halfopenPlayAll" class="btn btn-primary" onclick="playAll('halfopen')">
+                        <i id="halfopenPlayAllButton" class="fa fa-play"></i>
+                    </button>
+                    <div class="btn-group">
+                        <a id="ɛhalfopen" class="btn btn-default" onclick="playSingle('ɛ', this)">
+                            ɛ
+                        </a>
+                        <a id="œhalfopen" class="btn btn-default" onclick="playSingle('œ', this)">
+                            œ
+                        </a>
+                        <a id="ɔhalfopen" class="btn btn-default" onclick="playSingle('ɔ', this)">
+                            ɔ
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <img class="img-responsive" alt="Responsive image" src="img/mouthPosition.png">
+                </div>
+            </div>
+
+            <div class="row col-md-8" style="margin-top: 100px;">
+                <p>And the following are the most open vowel sounds:</p>
+            </div>
+            <div class="row">
+                <div class="col-sm-3 col-sm-offset-3" style="padding: 25px;">
+                    <button id="openPlayAll" class="btn btn-primary" onclick="playAll('open')">
+                        <i id="openPlayAllButton" class="fa fa-play"></i>
+                    </button>
+                    <div class="btn-group">
+                        <a id="aopen" class="btn btn-default" onclick="playSingle('a', this)">
+                            a
+                        </a>
+                        <a id="ɑopen" class="btn btn-default" onclick="playSingle('ɑ', this)">
+                            ɑ
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <img class="img-responsive" alt="Responsive image" src="img/mouthPosition.png">
+                </div>
+            </div>
+            <div class="row col-md-8">
+                <p>If you were a doctor and wanted to inspect your patients' throat or tonsils, what vowel sound would you ask them to say? " a-a-a" of course! It is the most open of the phonemes, in both French and English. It is also a "back" vowel.</p>
+            </div>
+
+
+            <!-- PART THREE -->
+            <div class="row col-md-8" style="margin-top: 100px;">
+                <p>III. The back vowels, whose articulation occurs with the rise of the tongue near the back of the palate, are:</p>
+            </div>
+            <div class="row">
+                <div class="col-sm-3 col-sm-offset-3" style="padding: 25px;">
+                    <button id="backPlayAll" class="btn btn-primary" onclick="playAll('back')">
+                        <i id="backPlayAllButton" class="fa fa-play"></i>
+                    </button>
+                    <div class="btn-group">
+                        <a id="aback" class="btn btn-default" onclick="playSingle('a', this)">
+                            a
+                        </a>
+                        <a id="ɑback" class="btn btn-default" onclick="playSingle('ɑ', this)">
+                            ɑ
+                        </a>
+                        <a id="uback" class="btn btn-default" onclick="playSingle('u', this)">
+                            u
+                        </a>
+                        <a id="oback" class="btn btn-default" onclick="playSingle('o', this)">
+                            o
+                        </a>
+                        <a id="ɔback" class="btn btn-default" onclick="playSingle('ɔ', this)">
+                            ɔ
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <img class="img-responsive" alt="Responsive image" src="img/mouthPosition.png">
+                </div>
+            </div>
+
+
+            <div class="row col-md-8" style="margin-top: 100px;">
+                <p>Another important articulatory quality is the shape of the lips as the vowel sounds are produced. We will describe this as rounded/unrounded, although the latter involves spreading the lips quite far, as for a smile, which does not occur in English pronunciation.</p>
+            </div>
+            <div class="row col-md-8" style="margin-top: 100px;">
+                <p>Pronounce
+                    <button class="btn btn-primary play-single" onclick="playSingle('i', this)">
+                        <i class="fa fa-play" style="padding-right: 10px;"></i> i
+                    </button>
+                with your lips spread as though you were smiling.</p>
+                <div class="col-sm-3 col-sm-offset-3">
+                    <img class="img-responsive" alt="Responsive image" src="img/lipsSmiling.png">
+                </div>
+            </div>
+
+            <div class="row col-md-8" style="margin-top: 100px;">
+                <p>Now, try to pronounce
+                    <button class="btn btn-primary play-single" onclick="playSingle('i', this)">
+                        <i class="fa fa-play" style="padding-right: 10px;"></i> i
+                    </button>
+                with your lips rounded. The sound changes simply due to the shape of the lips. Now you are pronouncing
+                    <button class="btn btn-primary play-single" onclick="playSingle('y', this)">
+                        <i class="fa fa-play" style="padding-right: 10px;"></i> y
+                    </button>
+                .</p>
+                <div class="col-sm-3 col-sm-offset-3">
+                    <img class="img-responsive" alt="Responsive image" src="img/lipsRounded.png">
+                </div>
+            </div>
+
+            <div class="row col-md-8" style="margin-top: 100px;">
+                <p>Compare:</p>
+            </div>
+            <div class="row col-md-8">
+                <p>
+                    <button class="btn btn-primary play-single" onclick="playSingle('pile', this)">
+                        <i class="fa fa-play" style="padding-right: 10px;"></i> pile
+                    </button>
+                and
+                    <button class="btn btn-primary play-single" onclick="playSingle('pull', this)">
+                        <i class="fa fa-play" style="padding-right: 10px;"></i> pull
+                    </button>
+                </p>
+            </div>
+            <div class="row col-md-8">
+                <p>The difference is in the shape of the lips, rounded, or spread wide–not as a broad, open smile, but just the cheek muscles pulling lips apart.</p>
+            </div>
+
+
+            <!-- PART FOUR -->
+            <div class="row col-md-8" style="margin-top: 100px;">
+                <p>IV. The last articulatory characteristic of French vowels is nasalization. These feel and sound different because air is allowed into the nasal passages, where it resonates.</p>
+            </div>
+            <div class="row col-md-8">
+                <p>Listen and repeat these nasal sounds:</p>
+            </div>
+            <div class="row">
+                <div class="col-sm-3 col-sm-offset-3" style="padding: 25px;">
+                    <button id="nasalPlayAll" class="btn btn-primary" onclick="playAll('nasal')">
+                        <i id="nasalPlayAllButton" class="fa fa-play"></i>
+                    </button>
+                    <div class="btn-group">
+                        <a id="ɛ̃nasal" class="btn btn-default" onclick="playSingle('ɛ̃', this)">
+                            ɛ̃
+                        </a>
+                        <a id="œ̃nasal" class="btn btn-default" onclick="playSingle('œ̃', this)">
+                            œ̃
+                        </a>
+                        <a id="ãnasal" class="btn btn-default" onclick="playSingle('ã', this)">
+                            ã
+                        </a>
+                        <a id="ɔ̃nasal" class="btn btn-default" onclick="playSingle('ɔ̃', this)">
+                            ɔ̃
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <img class="img-responsive" alt="Responsive image" src="img/mouthPosition.png">
+                </div>
+            </div>
+            <div class="row col-md-8" style="margin-top: 100px;">
+                <p>Try pronouncing the non-nasal
+                    <button class="btn btn-primary play-single" onclick="playSingle('a', this)">
+                        <i class="fa fa-play" style="padding-right: 10px;"></i> a
+                    </button>
+                , then its nasal counterpart
+                    <button class="btn btn-primary play-single" onclick="playSingle('ã', this)">
+                        <i class="fa fa-play" style="padding-right: 10px;"></i> ã
+                    </button>
+                .
+                </p>
+                <p>And the non-nasal
+                    <button class="btn btn-primary play-single" onclick="playSingle('o', this)">
+                        <i class="fa fa-play" style="padding-right: 10px;"></i> o
+                    </button>
+                , then its nasal counterpart
+                    <button class="btn btn-primary play-single" onclick="playSingle('ɔ̃', this)">
+                        <i class="fa fa-play" style="padding-right: 10px;"></i> ɔ̃
+                    </button>
+                .
+                </p>
+            </div>
+
+            <div class="row col-md-8" style="margin-top: 100px;">
+                <p>Feel the difference? When nasal vowels are produced, the “velum” at the back of the palate moves down slightly to allow air into the nasal passages, as in the following illustration:</p>
+                <div class="col-sm-3 col-sm-offset-3 text-center">
+                    <img class="img-responsive" alt="Responsive image" src="img/mouthPosition.png">
+                    <p>non-nasal</p>
+                </div>
+                <div class="col-sm-3 col-sm-offset-3 text-center">
+                    <img class="img-responsive" alt="Responsive image" src="img/mouthPosition.png">
+                    <p>nasal</p>
+                </div>
+            </div>
+
+            <!-- SUMMARY -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-5" style="margin-top: 100px">
+                        <table class="table-responsive">
+                            <tr>
+                                <th id="filler"></th>
+                                <th id="cell-head" colspan="2">FRONT</th>
+                                <th id="cell-head" colspan="2">BACK</th>
+                            </tr>
+                            <tr>
+                                <th id="filler"></th>
+                                <th id="cell-head">UN-ROUNDED</th>
+                                <th id="cell-head">ROUNDED</th>
+                                <th id="cell-head">UN-ROUNDED</th>
+                                <th id="cell-head">ROUNDED</th>
+                            </tr>
+                            <tr>
+                                <th id="cell-head">CLOSED</th>
+                                <th><button class="btn btn-primary play-single" onclick="playSingle('i', this)">
+                                    <i class="fa fa-play" style="padding-right: 10px;"></i>i</button></th>
+                                <th><button class="btn btn-primary play-single" onclick="playSingle('y', this)">
+                                    <i class="fa fa-play" style="padding-right: 10px;"></i>y</button></th>
+                                <th id="filler"></th>
+                                <th><button class="btn btn-primary play-single" onclick="playSingle('u', this)">
+                                    <i class="fa fa-play" style="padding-right: 10px;"></i>u</button></th>
+                            </tr>
+                            <tr>
+                                <th id="cell-head">1/2 CLOSED</th>
+                                <th><button class="btn btn-primary play-single" onclick="playSingle('e', this)">
+                                    <i class="fa fa-play" style="padding-right: 10px;"></i>e</button></th>
+                                <th><button class="btn btn-primary play-single" onclick="playSingle('ø', this)">
+                                    <i class="fa fa-play" style="padding-right: 10px;"></i>ø</button></th>
+                                <th id="filler"></th>
+                                <th><button class="btn btn-primary play-single" onclick="playSingle('o', this)">
+                                    <i class="fa fa-play" style="padding-right: 10px;"></i>o</button></th>
+                            </tr>
+                            <tr>
+                                <th id="cell-head">1/2 OPEN</th>
+                                <th><button class="btn btn-primary play-single" onclick="playSingle('ɛ', this)">
+                                    <i class="fa fa-play" style="padding-right: 10px;"></i>ɛ</button></th>
+                                <th><button class="btn btn-primary play-single" onclick="playSingle('œ', this)">
+                                    <i class="fa fa-play" style="padding-right: 10px;"></i>œ</button></th>
+                                <th id="filler"></th>
+                                <th><button class="btn btn-primary play-single" onclick="playSingle('ɔ', this)">
+                                    <i class="fa fa-play" style="padding-right: 10px;"></i>ɔ</button></th>
+                            </tr>
+                            <tr>
+                                <th id="cell-head">OPEN</th>
+                                <th><button class="btn btn-primary play-single" onclick="playSingle('a', this)">
+                                    <i class="fa fa-play" style="padding-right: 10px;"></i>a</button></th>
+                                <th id="filler"></th>
+                                <th><button class="btn btn-primary play-single" onclick="playSingle('ɑ', this)">
+                                    <i class="fa fa-play" style="padding-right: 10px;"></i>ɑ</button></th>
+                                <th id="filler"></th>
+                            </tr>
+                            <tr>
+                                <th id="cell-head">NASAL</th>
+                                <th><button class="btn btn-primary play-single" onclick="playSingle('ɛ̃', this)">
+                                    <i class="fa fa-play" style="padding-right: 10px;"></i>ɛ̃</button></th>
+                                <th><button class="btn btn-primary play-single" onclick="playSingle('œ̃', this)">
+                                    <i class="fa fa-play" style="padding-right: 10px;"></i>œ̃</button></th>
+                                <th><button class="btn btn-primary play-single" onclick="playSingle('ã', this)">
+                                    <i class="fa fa-play" style="padding-right: 10px;"></i>ã</button></th>
+                                <th><button class="btn btn-primary play-single" onclick="playSingle('ɔ̃', this)">
+                                    <i class="fa fa-play" style="padding-right: 10px;"></i>ɔ̃</button></th>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/freelancer.js"></script>
+
+</body>
+
+</html>
