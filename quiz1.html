@@ -97,15 +97,11 @@
         <div class="row">
             <div class="col-sm-12 text-center" style="padding: 25px;">
                     <p>Question 1</p>
-                <button id="front-backPlayAll" class="btn btn-primary" onclick="playQuestion('front-back')">
-                    <i id="front-backPlayAllButton" class="fa fa-play"></i>
+                <button id="back-frontVowelsPlayAll" class="btn btn-primary" onclick="playQuestion('back-frontVowels')">
+                    <i id="back-frontVowelsPlayAllButton" class="fa fa-play"></i>
                 </button>
-                <button id="button" type="button" class="btn btn-default btn-lg" onclick="checkAnswer('front-back', 'back')">
-                    Back Vowels
-                </button>
-                <button id="button" type="button" class="btn btn-default btn-lg" onclick="checkAnswer('front-back', 'front')">
-                    Front Vowels
-                </button>
+                <button id="button" type="button" class="btn btn-default btn-lg" onclick="checkAnswer('back-frontVowels', 'backVowels')">Back Vowels</button>
+                <button id="button" type="button" class="btn btn-default btn-lg" onclick="checkAnswer('back-frontVowels', 'frontVowels')">Front Vowels</button>
                  <i class="fa fa-check fa-4x" aria-hidden="true" style="padding-left: 20px; color: white;"></i>
             </div>
         </div>
@@ -117,8 +113,60 @@
                 <button id="half-open-closedPlayAll" class="btn btn-primary" onclick="playQuestion('half-open-closed')">
                     <i id="half-open-closedPlayAllButton" class="fa fa-play"></i>
                 </button>
-                <button type="button" class="btn btn-default btn-lg" onclick="checkAnswer('half-open-closed', 'half-closed')">Half-Closed Vowels</button>
-                <button type="button" class="btn btn-default btn-lg" onclick="checkAnswer('half-open-closed', 'half-open')">Half-Open Vowels</button>
+                <button type="button" class="btn btn-default btn-lg" onclick="checkAnswer('half-open-closed', 'halfClosed')">Half-Closed Vowels</button>
+                <button type="button" class="btn btn-default btn-lg" onclick="checkAnswer('half-open-closed', 'halfOpen')">Half-Open Vowels</button>
+                <i class="fa fa-check fa-4x" aria-hidden="true" style="padding-left: 20px; color: white;"></i>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 text-center" style="padding: 25px;">
+                    <p>Question 3</p>
+                <button id="nasal-nonNasalPlayAll" class="btn btn-primary" onclick="playQuestion('nasal-nonNasal')">
+                    <i id="nasal-nonNasalPlayAllButton" class="fa fa-play"></i>
+                </button>
+                <button type="button" class="btn btn-default btn-lg" onclick="checkAnswer('nasal-nonNasal', 'nasal')">Nasal Vowels</button>
+                <button type="button" class="btn btn-default btn-lg" onclick="checkAnswer('nasal-nonNasal', 'nonNasal')">Non-nasal Vowels</button>
+                <i class="fa fa-check fa-4x" aria-hidden="true" style="padding-left: 20px; color: white;"></i>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 text-center" style="padding: 25px;">
+                    <p>Question 4</p>
+                <button id="rounded-unRoundedPlayAll" class="btn btn-primary" onclick="playQuestion('rounded-unRounded')">
+                    <i id="rounded-unRoundedPlayAllButton" class="fa fa-play"></i>
+                </button>
+                <button type="button" class="btn btn-default btn-lg" onclick="checkAnswer('rounded-unRounded', 'rounded')">Rounded Vowels</button>
+                <button type="button" class="btn btn-default btn-lg" onclick="checkAnswer('rounded-unRounded', 'unRounded')">Un-rounded vowels</button>
+                <i class="fa fa-check fa-4x" aria-hidden="true" style="padding-left: 20px; color: white;"></i>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 text-center" style="padding: 25px;">
+                    <p>Question 5</p>
+                <button id="front-lessFrontPlayAll" class="btn btn-primary" onclick="playQuestion('front-lessFront')">
+                    <i id="front-lessFrontPlayAllButton" class="fa fa-play"></i>
+                </button>
+                <button type="button" class="btn btn-default btn-lg" onclick="checkAnswer('front-lessFront', 'front')">Front</button>
+                <button type="button" class="btn btn-default btn-lg" onclick="checkAnswer('front-lessFront', 'lessFront')">Less Front</button>
+                <i class="fa fa-check fa-4x" aria-hidden="true" style="padding-left: 20px; color: white;"></i>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 text-center" style="padding: 25px;">
+                    <p>Question 6</p>
+                <button id="back-lessBackPlayAll" class="btn btn-primary" onclick="playQuestion('back-lessBack')">
+                    <i id="back-lessBackPlayAllButton" class="fa fa-play"></i>
+                </button>
+                <button type="button" class="btn btn-default btn-lg" onclick="checkAnswer('back-lessBack', 'back')">Back</button>
+                <button type="button" class="btn btn-default btn-lg" onclick="checkAnswer('back-lessBack', 'lessBack')">Less Back</button>
                 <i class="fa fa-check fa-4x" aria-hidden="true" style="padding-left: 20px; color: white;"></i>
             </div>
         </div>

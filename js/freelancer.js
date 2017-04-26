@@ -77,14 +77,34 @@
     // BEGIN QUIZ 1
     
     // Play buttons for each question:
-    $('#front-backPlayAll').click(function() {
+    $('#back-frontVowelsPlayAll').click(function() {
         $('#display_advance').toggle('1000');
         $("i", this).toggleClass("fa-play fa-stop");
     });
 
     $('#half-open-closedPlayAll').click(function() {
-    $('#display_advance').toggle('1000');
-    $("i", this).toggleClass("fa-play fa-stop");
+        $('#display_advance').toggle('1000');
+        $("i", this).toggleClass("fa-play fa-stop");
+    });
+
+    $('#nasal-nonNasalPlayAll').click(function() {
+        $('#display_advance').toggle('1000');
+        $("i", this).toggleClass("fa-play fa-stop");
+    });
+
+    $('#rounded-unRoundedPlayAll').click(function() {
+        $('#display_advance').toggle('1000');
+        $("i", this).toggleClass("fa-play fa-stop");
+    });
+
+    $('#front-lessFrontPlayAll').click(function() {
+        $('#display_advance').toggle('1000');
+        $("i", this).toggleClass("fa-play fa-stop");
+    });
+
+    $('#back-lessBackPlayAll').click(function() {
+        $('#display_advance').toggle('1000');
+        $("i", this).toggleClass("fa-play fa-stop");
     });
 
     $("#button").click(function() {
@@ -178,10 +198,23 @@ function playAll(group, i = 0) {
 }
 
 var setupQuiz = (function() {
-    var backVowels = ['1', '2', '3'];
-    var frontVowels = ['4', '5', '6'];
-    var halfClosed = ['7', '8', '9'];
-    var halfOpen = ['10', 'e', 'i'];
+    var backVowels = ['vous', 'bonne', 'beau', 'bon', 'tout', 'eau', 'flotte', 'ton'];
+    var frontVowels = ['pile', 'mes', 'frère', 'patte', 'vin', 'fille', 'thé', 'père', 'brin'];
+
+    var halfClosed = ['mes', 'feu', 'beau', 'thé', 'le', 'tôt', 'pré', 'je', 'sceau'];
+    var halfOpen = ['père', 'sœur', 'bonne', 'frère', 'beurre', 'flotte', 'sept', 'leur', 'tonne'];
+
+    var nasal = ['vin', 'brun', 'danse', 'bon', 'brin', 'un', 'flan', 'ton', 'teint'];
+    var nonNasal = ['bonne', 'mes', 'patte', 'thé', 'sceau', 'pile', 'flotte', 'beau', 'beurre'];
+
+    var rounded = ['tu', 'feu', 'sœur', 'brun', 'gru', 'le', 'beurre', 'un', 'lu'];
+    var unRounded = ['pile', 'mes', 'père', 'patte', 'vin', 'fille', 'pré', 'chat', 'teint'];
+
+    var front = ['mes', 'père', 'patte', 'vin', 'pile', 'pré', 'frère', 'chat', 'teint'];
+    var lessFront = ['feu', 'sœur', 'brun', 'tu', 'le', 'beurre', 'un', 'gru', 'leur'];
+
+    var back = ['pâte', 'dans', 'mât', 'grand', 'flan', 'danse', 'tant', 'barre'];
+    var lessBack = ['vous', 'beau', 'bonne', 'bon', 'flou', 'tôt', 'flotte', 'ton', 'cou'];
 
     var returnGroup = {}; // group object
     var groups = {}; // key: group, value: random questions
@@ -189,21 +222,53 @@ var setupQuiz = (function() {
 
     returnGroup.setGroups = function(newGroup) {
         var randomBinary = Math.round(Math.random());
-        if (newGroup == 'front-back') {
+        if (newGroup == 'back-frontVowels') {
             if (randomBinary == 0) {
                 groups[newGroup] = randomize(backVowels);
-                answers[newGroup] = 'back';
+                answers[newGroup] = 'backVowels';
             } else {
                 groups[newGroup] = randomize(frontVowels);
-                answers[newGroup] = 'front';
+                answers[newGroup] = 'frontVowels';
             }
         } else if (newGroup == 'half-open-closed') {
             if (randomBinary == 0) {
                 groups[newGroup] = randomize(halfClosed);
-                answers[newGroup] = 'half-closed';
+                answers[newGroup] = 'halfClosed';
             } else {
                 groups[newGroup] = randomize(halfOpen);
-                answers[newGroup] = 'half-open';
+                answers[newGroup] = 'halfOpen';
+            }
+        } else if (newGroup == 'nasal-nonNasal') {
+            if (randomBinary == 0) {
+                groups[newGroup] = randomize(nasal);
+                answers[newGroup] = 'nasal';
+            } else {
+                groups[newGroup] = randomize(nonNasal);
+                answers[newGroup] = 'nonNasal';
+            }
+        } else if (newGroup == 'rounded-unRounded') {
+            if (randomBinary == 0) {
+                groups[newGroup] = randomize(rounded);
+                answers[newGroup] = 'rounded';
+            } else {
+                groups[newGroup] = randomize(unRounded);
+                answers[newGroup] = 'unRounded';
+            }
+        } else if (newGroup == 'front-lessFront') {
+            if (randomBinary == 0) {
+                groups[newGroup] = randomize(front);
+                answers[newGroup] = 'front';
+            } else {
+                groups[newGroup] = randomize(lessFront);
+                answers[newGroup] = 'lessFront';
+            }
+        } else if (newGroup == 'back-lessBack') {
+            if (randomBinary == 0) {
+                groups[newGroup] = randomize(back);
+                answers[newGroup] = 'back';
+            } else {
+                groups[newGroup] = randomize(lessBack);
+                answers[newGroup] = 'lessBack';
             }
         }
     };
@@ -214,7 +279,7 @@ var setupQuiz = (function() {
 
     returnGroup.getAnswers = function() {
         return answers;
-    }
+    };
 
     return returnGroup;
 }());
@@ -230,9 +295,17 @@ function playQuestion(group, i = 0, question) {
     var groups = setupQuiz.getGroups();
 
     if (!(group in groups)) {
-        if (group == 'front-back') {
+        if (group == 'back-frontVowels') {
             setupQuiz.setGroups(group);
         } else if (group == 'half-open-closed') {
+            setupQuiz.setGroups(group);
+        } else if (group == 'nasal-nonNasal') {
+            setupQuiz.setGroups(group);
+        } else if (group == 'rounded-unRounded') {
+            setupQuiz.setGroups(group);
+        } else if (group == 'front-lessFront') {
+            setupQuiz.setGroups(group);
+        } else if (group == 'back-lessBack') {
             setupQuiz.setGroups(group);
         }
     }
