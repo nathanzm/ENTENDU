@@ -78,62 +78,101 @@
     
     // Play buttons for each question:
     $('#back-frontVowelsPlayAll').click(function() {
-        $('#display_advance').toggle('1000');
         $("i", this).toggleClass("fa-play fa-stop");
         $(this).parent().find('>button').prop("disabled", false);
     });
 
     $('#half-open-closedPlayAll').click(function() {
-        $('#display_advance').toggle('1000');
         $("i", this).toggleClass("fa-play fa-stop");
         $(this).parent().find('>button').prop("disabled", false);
     });
 
     $('#nasal-nonNasalPlayAll').click(function() {
-        $('#display_advance').toggle('1000');
         $("i", this).toggleClass("fa-play fa-stop");
         $(this).parent().find('>button').prop("disabled", false);
     });
 
     $('#rounded-unRoundedPlayAll').click(function() {
-        $('#display_advance').toggle('1000');
         $("i", this).toggleClass("fa-play fa-stop");
         $(this).parent().find('>button').prop("disabled", false);
     });
 
     $('#front-lessFrontPlayAll').click(function() {
-        $('#display_advance').toggle('1000');
         $("i", this).toggleClass("fa-play fa-stop");
         $(this).parent().find('>button').prop("disabled", false);
     });
 
     $('#back-lessBackPlayAll').click(function() {
-        $('#display_advance').toggle('1000');
         $("i", this).toggleClass("fa-play fa-stop");
         $(this).parent().find('>button').prop("disabled", false);
     });
 
     // Check answer upon button click and trigger animations
     $('#back-front #button').click(function() {
-        $('#display_advance').toggle('1000');
         if (checkAnswer('back-frontVowels', 'backVowels')) {
-            $('.animate-out').toggleClass('animate-out-success');
+            // $('.animate-out').toggleClass('animate-out-success');
+            $('#back-front-container').toggleClass('animate-out animate-out-success');
+
             $(this).parent().find('>button').prop("disabled", true);
         } else if (checkAnswer('back-frontVowels', 'frontVowels')) {
-            $('.animate-out').toggleClass('animate-out-danger');
+            $('#back-front-container').toggleClass('animate-out animate-out-danger');
             $(this).parent().find('i').toggleClass("fa-check fa-times");
             $(this).parent().find('>button').prop("disabled", true);
         }
     });
     $('#half-open-closed #button').click(function() {
-        $('#display_advance').toggle('1000');
         if (checkAnswer('half-open-closed', 'halfClosed')) {
-            $(this).parent().eq(3).toggleClass('animate-out-success');
-
+            $('#half-open-closed-container').toggleClass('animate-out animate-out-success');
 
             $(this).parent().find('>button').prop("disabled", true);
         } else if (checkAnswer('half-open-closed', 'halfOpen')) {
-            $(this).parent().eq(3).toggleClass('animate-out-danger');
+            $('#half-open-closed-container').toggleClass('animate-out animate-out-danger');
+
+            $(this).parent().find('i').toggleClass("fa-check fa-times");
+            $(this).parent().find('>button').prop("disabled", true);
+        }
+    });
+
+    $('#nasal-nonNasal #button').click(function() {
+        if (checkAnswer('nasal-nonNasal', 'nasal')) {
+            $('#nasal-nonNasal-container').toggleClass('animate-out animate-out-success');
+            $(this).parent().find('>button').prop("disabled", true);
+        } else if (checkAnswer('nasal-nonNasal', 'nonNasal')) {
+            $('#nasal-nonNasal-container').toggleClass('animate-out animate-out-danger');
+            $(this).parent().find('i').toggleClass("fa-check fa-times");
+            $(this).parent().find('>button').prop("disabled", true);
+        }
+    });
+    $('#rounded-unRounded #button').click(function() {
+        if (checkAnswer('rounded-unRounded', 'rounded')) {
+            $('#rounded-unRounded-container').toggleClass('animate-out animate-out-success');
+
+            $(this).parent().find('>button').prop("disabled", true);
+        } else if (checkAnswer('rounded-unRounded', 'unRounded')) {
+            $('#rounded-unRounded-container').toggleClass('animate-out animate-out-danger');
+
+            $(this).parent().find('i').toggleClass("fa-check fa-times");
+            $(this).parent().find('>button').prop("disabled", true);
+        }
+    });
+
+    $('#front-lessFront #button').click(function() {
+        if (checkAnswer('front-lessFront', 'front')) {
+            $('#front-lessFront-container').toggleClass('animate-out animate-out-success');
+            $(this).parent().find('>button').prop("disabled", true);
+        } else if (checkAnswer('front-lessFront', 'lessFront')) {
+            $('#front-lessFront-container').toggleClass('animate-out animate-out-danger');
+            $(this).parent().find('i').toggleClass("fa-check fa-times");
+            $(this).parent().find('>button').prop("disabled", true);
+        }
+    });
+    $('#back-lessBack #button').click(function() {
+        if (checkAnswer('back-lessBack', 'back')) {
+            $('#back-lessBack-container').toggleClass('animate-out animate-out-success');
+
+            $(this).parent().find('>button').prop("disabled", true);
+        } else if (checkAnswer('back-lessBack', 'lessBack')) {
+            $('#back-lessBack-container').toggleClass('animate-out animate-out-danger');
             $(this).parent().find('i').toggleClass("fa-check fa-times");
             $(this).parent().find('>button').prop("disabled", true);
         }
