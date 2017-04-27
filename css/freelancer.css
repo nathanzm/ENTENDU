@@ -548,7 +548,15 @@ th#cell-head {
   z-index: -1;
 }
 
-.radial-out {
+.answer1 {
+  /*background-color: #fff;*/
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: -webkit-radial-gradient(red, red 20%, transparent 20%, transparent 100%);
+}
+
+.animate-out {
   -webkit-transition: all 2s ease;  
   -moz-transition: all 2s ease;  
   -o-transition: all 2s ease;  
@@ -556,8 +564,14 @@ th#cell-head {
   transition: all 2s ease;
 }
 
-.radial-out-active {
+.animate-out-success {
   background-color: #18BC9C;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+.animate-out-danger {
+  background-color: #f29191;
   height: 100%;
   width: 100%;
   z-index: -1;

@@ -80,36 +80,63 @@
     $('#back-frontVowelsPlayAll').click(function() {
         $('#display_advance').toggle('1000');
         $("i", this).toggleClass("fa-play fa-stop");
+        $(this).parent().find('>button').prop("disabled", false);
     });
 
     $('#half-open-closedPlayAll').click(function() {
         $('#display_advance').toggle('1000');
         $("i", this).toggleClass("fa-play fa-stop");
+        $(this).parent().find('>button').prop("disabled", false);
     });
 
     $('#nasal-nonNasalPlayAll').click(function() {
         $('#display_advance').toggle('1000');
         $("i", this).toggleClass("fa-play fa-stop");
+        $(this).parent().find('>button').prop("disabled", false);
     });
 
     $('#rounded-unRoundedPlayAll').click(function() {
         $('#display_advance').toggle('1000');
         $("i", this).toggleClass("fa-play fa-stop");
+        $(this).parent().find('>button').prop("disabled", false);
     });
 
     $('#front-lessFrontPlayAll').click(function() {
         $('#display_advance').toggle('1000');
         $("i", this).toggleClass("fa-play fa-stop");
+        $(this).parent().find('>button').prop("disabled", false);
     });
 
     $('#back-lessBackPlayAll').click(function() {
         $('#display_advance').toggle('1000');
         $("i", this).toggleClass("fa-play fa-stop");
+        $(this).parent().find('>button').prop("disabled", false);
     });
 
-    $("#button").click(function() {
+    // Check answer upon button click and trigger animations
+    $('#back-front #button').click(function() {
         $('#display_advance').toggle('1000');
-        $('.radial-out').toggleClass('radial-out-active');
+        if (checkAnswer('back-frontVowels', 'backVowels')) {
+            $('.animate-out').toggleClass('animate-out-success');
+            $(this).parent().find('>button').prop("disabled", true);
+        } else if (checkAnswer('back-frontVowels', 'frontVowels')) {
+            $('.animate-out').toggleClass('animate-out-danger');
+            $(this).parent().find('i').toggleClass("fa-check fa-times");
+            $(this).parent().find('>button').prop("disabled", true);
+        }
+    });
+    $('#half-open-closed #button').click(function() {
+        $('#display_advance').toggle('1000');
+        if (checkAnswer('half-open-closed', 'halfClosed')) {
+            $(this).parent().eq(3).toggleClass('animate-out-success');
+
+
+            $(this).parent().find('>button').prop("disabled", true);
+        } else if (checkAnswer('half-open-closed', 'halfOpen')) {
+            $(this).parent().eq(3).toggleClass('animate-out-danger');
+            $(this).parent().find('i').toggleClass("fa-check fa-times");
+            $(this).parent().find('>button').prop("disabled", true);
+        }
     });
 
 })(jQuery); // End of use strict
@@ -357,9 +384,9 @@ function checkAnswer(group, selection) {
 
     if (group in answers) {
         if (selection == answers[group]) {
-            alert("CORRECT");
+            return true;
         } else {
-        	alert("INCORRECT");
+        	return false;
         }
     }
 }
